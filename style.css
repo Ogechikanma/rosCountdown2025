@@ -1,0 +1,253 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Continuous fade-in and fade-out animation */
+.banner {
+    font-size: 5rem;
+    color: #FB4141;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: fadeInOut 2s infinite;
+}
+
+.banner.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+.time {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    width: 500px;
+    height: 350px;
+    font-size: 14rem;
+    text-align: center;
+    border: 1px solid #484747;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+#blinker {
+    width: 30px;
+    height: 350px;
+    font-size: 5rem;border: none;
+}
+
+button {
+    height: 70px;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.7s ease;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #333;
+    color: aliceblue;
+}
+
+h1 {
+    font-size: 6rem;
+    color: #26d458;
+    display: none;
+    animation: colorChange 3s infinite, popIn 2s ease-in-out infinite alternate;
+}
+
+p {
+    font-size: 2.5rem;
+    color: #fff;
+    display: none;
+    animation: popIn 2s ease-in-out infinite alternate;
+}
+
+span {
+    color: #e6ef69;;
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+::placeholder {
+    color: rgb(15, 15, 15);
+    opacity: 1;
+  }
+
+/* Animations */
+@keyframes colorChange {
+    0% {
+        color: #4335A7; 
+    }
+    25% {
+        color: #FF7F3E; 
+    }
+    50% {
+        color: #FFF6E9; 
+    }
+    75% {
+        color: #008000; 
+    }
+    100% {
+        color: #0000ff; 
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner {
+        font-size: 2rem;
+    }
+
+    .box {
+        width: 60px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    #blinker {
+        width: 10px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        width: 100px;
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    span {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+} 
+
+@media (min-width: 601px) and (max-width: 1110px){
+    .banner {
+        font-size: 3rem;
+    }
+
+    .box {
+        width: 200px;
+        height: 130px;
+        font-size: 3.5rem;
+    }
+
+    #blinker {
+        width: 10px;
+        height: 130px;
+        font-size: 2.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        width: 100px;
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    span {
+        font-size: 0.8rem;
+        font-weight: 900;
+    }
+}
+
